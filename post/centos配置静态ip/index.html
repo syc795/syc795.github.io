@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  <title>CentOS配置静态IP &middot; My New Hugo Site</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="CentOS配置静态IP">
+<meta itemprop="description" content="1、切换root，使用dhclient自定分配IP 命令：
+sudo su dhclient 2、查看已分配的IP 这里分配到是192.168.1.106，后面需要这个IP设置为静态IP
+命令：
+ifconfig 3、修改网卡配置文件 修改或新增标红处配置，wq保存退出。
+命令：
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 4、重启网络配置 systemctl restart network.service 可能需要重新连接网络
+5、测试 ping百度测试成功。
+命令：
+ping www.baidu.com ">
+<meta itemprop="datePublished" content="2020-07-06T01:51:15&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-06T01:51:15&#43;08:00" />
+<meta itemprop="wordCount" content="24">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CentOS配置静态IP"/>
+<meta name="twitter:description" content="1、切换root，使用dhclient自定分配IP 命令：
+sudo su dhclient 2、查看已分配的IP 这里分配到是192.168.1.106，后面需要这个IP设置为静态IP
+命令：
+ifconfig 3、修改网卡配置文件 修改或新增标红处配置，wq保存退出。
+命令：
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 4、重启网络配置 systemctl restart network.service 可能需要重新连接网络
+5、测试 ping百度测试成功。
+命令：
+ping www.baidu.com "/>
+
+
+<meta property="og:title" content="CentOS配置静态IP" />
+<meta property="og:description" content="1、切换root，使用dhclient自定分配IP 命令：
+sudo su dhclient 2、查看已分配的IP 这里分配到是192.168.1.106，后面需要这个IP设置为静态IP
+命令：
+ifconfig 3、修改网卡配置文件 修改或新增标红处配置，wq保存退出。
+命令：
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 4、重启网络配置 systemctl restart network.service 可能需要重新连接网络
+5、测试 ping百度测试成功。
+命令：
+ping www.baidu.com " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://syc795.github.io/post/centos%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip/" />
+<meta property="article:published_time" content="2020-07-06T01:51:15+08:00" />
+<meta property="article:modified_time" content="2020-07-06T01:51:15+08:00" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+      
+
+      <h1>My New Hugo Site</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://syc795.github.io/">Home</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>CentOS配置静态IP</h1>
+
+  <div class="post-date">
+    <time datetime="2020-07-06T01:51:15&#43;0800">Jul 6, 2020</time> &middot; 1 min read
+  </div>
+
+  <h2 id="1切换root使用dhclient自定分配ip">1、切换root，使用dhclient自定分配IP</h2>
+<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232204987.png" alt="image-20200705232204987"></p>
+<p>命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo su
+dhclient
+</code></pre></div><h2 id="2查看已分配的ip">2、查看已分配的IP</h2>
+<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232335052.png" alt="image-20200705232335052"></p>
+<p>这里分配到是192.168.1.106，后面需要这个IP设置为静态IP</p>
+<p>命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ifconfig
+</code></pre></div><h2 id="3修改网卡配置文件">3、修改网卡配置文件</h2>
+<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232526856.png" alt="image-20200705232526856"></p>
+<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232750122.png" alt="image-20200705232750122"></p>
+<p>修改或新增标红处配置，wq保存退出。</p>
+<p>命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/sysconfig/network-scripts/ifcfg-ens33
+</code></pre></div><h2 id="4重启网络配置">4、重启网络配置</h2>
+<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232941537.png" alt="image-20200705232941537"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">systemctl restart network.service
+</code></pre></div><p>可能需要重新连接网络</p>
+<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705233657160.png" alt="image-20200705233657160"></p>
+<h2 id="5测试">5、测试</h2>
+<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705233723948.png" alt="image-20200705233723948"></p>
+<p>ping百度测试成功。</p>
+<p>命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ping www.baidu.com
+</code></pre></div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy;  2020
+
+    
+
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

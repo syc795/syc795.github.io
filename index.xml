@@ -6,10 +6,27 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2020 23:54:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 01:51:15 +0800</lastBuildDate>
     
 	<atom:link href="https://syc795.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CentOS配置静态IP</title>
+      <link>https://syc795.github.io/post/centos%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip/</link>
+      <pubDate>Mon, 06 Jul 2020 01:51:15 +0800</pubDate>
+      
+      <guid>https://syc795.github.io/post/centos%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip/</guid>
+      <description>1、切换root，使用dhclient自定分配IP 命令：
+sudo su dhclient 2、查看已分配的IP 这里分配到是192.168.1.106，后面需要这个IP设置为静态IP
+命令：
+ifconfig 3、修改网卡配置文件 修改或新增标红处配置，wq保存退出。
+命令：
+vim /etc/sysconfig/network-scripts/ifcfg-ens33 4、重启网络配置 systemctl restart network.service 可能需要重新连接网络
+5、测试 ping百度测试成功。
+命令：
+ping www.baidu.com </description>
+    </item>
     
     <item>
       <title>CentOS安装</title>
