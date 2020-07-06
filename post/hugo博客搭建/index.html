@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  <title>Hugo博客搭建 &middot; My New Hugo Site</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="Hugo博客搭建">
+<meta itemprop="description" content="列举Hugo安装博客的步骤命令（Mac）
+1、安装Hugo #安装Hugo brew update brew install hugo hugo version 2、新建博客并启动 #新建 hugo new site MyBlog #下载主题并配置 cd themes git clone https://github.com/alexandrevicenzi/soho.git vim config.toml #新建博客文件 hugo new post/blog.md #编写博客 vim content/post/blog.md #启动（本地） hugo server -t soho --buildDrafts 3、上传到Github #上传生成后的文件到github cd public #初始化仓库并提交 git init git add * git commmit -m &#34;hugo&#34; #设置远端仓库地址 git remote add origin https://github.com/syc795/syc795.github.io.git #push到仓库 git push -u origin master 4、新增、更新博客 #新增博客 hugo new post/blog.md #编写博客 vim content/post/blog.">
+<meta itemprop="datePublished" content="2020-07-06T23:26:44&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-06T23:26:44&#43;08:00" />
+<meta itemprop="wordCount" content="82">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo博客搭建"/>
+<meta name="twitter:description" content="列举Hugo安装博客的步骤命令（Mac）
+1、安装Hugo #安装Hugo brew update brew install hugo hugo version 2、新建博客并启动 #新建 hugo new site MyBlog #下载主题并配置 cd themes git clone https://github.com/alexandrevicenzi/soho.git vim config.toml #新建博客文件 hugo new post/blog.md #编写博客 vim content/post/blog.md #启动（本地） hugo server -t soho --buildDrafts 3、上传到Github #上传生成后的文件到github cd public #初始化仓库并提交 git init git add * git commmit -m &#34;hugo&#34; #设置远端仓库地址 git remote add origin https://github.com/syc795/syc795.github.io.git #push到仓库 git push -u origin master 4、新增、更新博客 #新增博客 hugo new post/blog.md #编写博客 vim content/post/blog."/>
+
+
+<meta property="og:title" content="Hugo博客搭建" />
+<meta property="og:description" content="列举Hugo安装博客的步骤命令（Mac）
+1、安装Hugo #安装Hugo brew update brew install hugo hugo version 2、新建博客并启动 #新建 hugo new site MyBlog #下载主题并配置 cd themes git clone https://github.com/alexandrevicenzi/soho.git vim config.toml #新建博客文件 hugo new post/blog.md #编写博客 vim content/post/blog.md #启动（本地） hugo server -t soho --buildDrafts 3、上传到Github #上传生成后的文件到github cd public #初始化仓库并提交 git init git add * git commmit -m &#34;hugo&#34; #设置远端仓库地址 git remote add origin https://github.com/syc795/syc795.github.io.git #push到仓库 git push -u origin master 4、新增、更新博客 #新增博客 hugo new post/blog.md #编写博客 vim content/post/blog." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://syc795.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+<meta property="article:published_time" content="2020-07-06T23:26:44+08:00" />
+<meta property="article:modified_time" content="2020-07-06T23:26:44+08:00" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+      
+
+      <h1>My New Hugo Site</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://syc795.github.io/">Home</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Hugo博客搭建</h1>
+
+  <div class="post-date">
+    <time datetime="2020-07-06T23:26:44&#43;0800">Jul 6, 2020</time> &middot; 1 min read
+  </div>
+
+  <p>列举Hugo安装博客的步骤命令（Mac）</p>
+<h3 id="1安装hugo">1、安装Hugo</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装Hugo</span>
+brew update
+brew install hugo
+hugo version
+</code></pre></div><h3 id="2新建博客并启动">2、新建博客并启动</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#新建</span>
+hugo new site MyBlog
+<span style="color:#75715e">#下载主题并配置</span>
+cd themes
+git clone https://github.com/alexandrevicenzi/soho.git
+vim config.toml
+<span style="color:#75715e">#新建博客文件</span>
+hugo new post/blog.md
+<span style="color:#75715e">#编写博客</span>
+vim content/post/blog.md
+<span style="color:#75715e">#启动（本地）</span>
+hugo server -t soho --buildDrafts
+</code></pre></div><h3 id="3上传到github">3、上传到Github</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#上传生成后的文件到github</span>
+cd public
+<span style="color:#75715e">#初始化仓库并提交</span>
+git init
+git add *
+git commmit -m <span style="color:#e6db74">&#34;hugo&#34;</span>
+<span style="color:#75715e">#设置远端仓库地址</span>
+git remote add origin https://github.com/syc795/syc795.github.io.git
+<span style="color:#75715e">#push到仓库</span>
+git push -u origin master
+</code></pre></div><h3 id="4新增更新博客">4、新增、更新博客</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#新增博客</span>
+hugo new post/blog.md
+<span style="color:#75715e">#编写博客</span>
+vim content/post/blog.md
+<span style="color:#75715e">#新建、修改博客后重新生成静态文件</span>
+cd public
+hugo --buildDrafts
+<span style="color:#75715e">#提交文件</span>
+git add *
+git push
+</code></pre></div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy;  2020
+
+    
+
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

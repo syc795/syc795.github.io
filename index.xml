@@ -6,10 +6,20 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jul 2020 01:51:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 23:26:44 +0800</lastBuildDate>
     
 	<atom:link href="https://syc795.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo博客搭建</title>
+      <link>https://syc795.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Mon, 06 Jul 2020 23:26:44 +0800</pubDate>
+      
+      <guid>https://syc795.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description>列举Hugo安装博客的步骤命令（Mac）
+1、安装Hugo #安装Hugo brew update brew install hugo hugo version 2、新建博客并启动 #新建 hugo new site MyBlog #下载主题并配置 cd themes git clone https://github.com/alexandrevicenzi/soho.git vim config.toml #新建博客文件 hugo new post/blog.md #编写博客 vim content/post/blog.md #启动（本地） hugo server -t soho --buildDrafts 3、上传到Github #上传生成后的文件到github cd public #初始化仓库并提交 git init git add * git commmit -m &amp;#34;hugo&amp;#34; #设置远端仓库地址 git remote add origin https://github.com/syc795/syc795.github.io.git #push到仓库 git push -u origin master 4、新增、更新博客 #新增博客 hugo new post/blog.md #编写博客 vim content/post/blog.</description>
+    </item>
     
     <item>
       <title>CentOS配置静态IP</title>
