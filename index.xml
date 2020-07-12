@@ -18,7 +18,7 @@
       
       <guid>https://syc795.github.io/post/spring%E9%85%8D%E7%BD%AE/</guid>
       <description>以spring的application.properties配置文件为例。
-1、数据库连接配置 spring.datasource.url=jdbc:mysql://localhost:3306/spring?useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;useSSL=false spring.datasource.username=root spring.datasource.password=11111111 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver 2、服务端口配置 server.port=7925 3、日志配置 logging.file.name=output/logs/syc.log logging.level.root=info logging.level.com.syc.spring=debug 4、mybatis配置 相关dao接口需要增加@@Mapper注解。
+1、数据库连接配置 spring.datasource.url=jdbc:mysql://localhost:3306/spring?useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;useSSL=false spring.datasource.username=root spring.datasource.password=11111111 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver 2、服务端口配置 server.port=7925 3、日志配置 logging.file.name=output/logs/syc.log logging.level.root=info logging.level.com.syc.spring=debug 4、mybatis配置 相关dao接口需要增加@Mapper注解。
 mybatis.mapperLocations=classpath:mapper/*.xml mybatis.typeAliasesPackage=com.syc.spring.dao </description>
     </item>
     
