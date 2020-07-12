@@ -7,20 +7,20 @@
 
   <title>My New Hugo Site</title>
 
-  <meta name="description" content="" />
+  <meta name="description" content="My Blog" />
 
   
 
 <meta itemprop="name" content="My New Hugo Site">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="My Blog">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="My New Hugo Site"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="My Blog"/>
 
 
 <meta property="og:title" content="My New Hugo Site" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="My Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://syc795.github.io/" />
 <meta property="og:updated_time" content="2020-07-07T23:14:41+08:00" />
@@ -43,7 +43,7 @@
   
 
 
-  
+  <link type="text/css" rel="stylesheet" href="/css/blog.css">
 
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
@@ -68,10 +68,16 @@
     <div class="sidebar-about">
       
         
+        <div class="author-image">
+          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
       
 
       <h1>My New Hugo Site</h1>
 
+      
+      <p class="lead">My Blog</p>
       
     </div>
 
@@ -80,11 +86,27 @@
         <li>
           <a href="https://syc795.github.io/">Home</a>
         </li>
-        
+        <li>
+          <a href="/posts/">Posts</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
       </ul>
     </nav>
 
     <section class="social-icons">
+      
+      <a href="#" rel="me" title="Linkedin" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="Twitter" target="_blank">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
       
     </section>
   </div>
@@ -104,8 +126,7 @@
 
         <div>
           以spring的application.properties配置文件为例。
-1、数据库连接配置 spring.datasource.url=jdbc:mysql://localhost:3306/spring?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false spring.datasource.username=root spring.datasource.password=11111111 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver 2、服务端口配置 server.port=7925 3、日志配置 logging.file.name=output/logs/syc.log logging.level.root=info logging.level.com.syc.spring=debug 4、mybatis配置 相关dao接口需要增加@Mapper注解。
-mybatis.mapperLocations=classpath:mapper/*.xml mybatis.typeAliasesPackage=com.syc.spring.dao 
+1、数据库连接配置 spring.datasource.url=jdbc:mysql://localhost:3306/spring?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false spring.datasource.username=root spring.datasource.password=11111111 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver 2、服务端口配置 server.port=7925 3、日志配置 logging.file.name=output/logs/syc.log logging.
         </div>
 
         <div class="read-more-link">
@@ -123,7 +144,7 @@ mybatis.mapperLocations=classpath:mapper/*.xml mybatis.typeAliasesPackage=com.sy
 
         <div>
           列举Hugo安装博客的步骤命令（Mac）
-1、安装Hugo #安装Hugo brew update brew install hugo hugo version 2、新建博客并启动 #新建 hugo new site MyBlog #下载主题并配置 cd themes git clone https://github.com/alexandrevicenzi/soho.git vim config.toml #新建博客文件 hugo new post/blog.md #编写博客 vim content/post/blog.md #启动（本地） hugo server -t soho --buildDrafts 3、上传到Github #上传生成后的文件到github cd public #初始化仓库并提交 git init git add * git commmit -m &#34;hugo&#34; #设置远端仓库地址 git remote add origin https://github.com/syc795/syc795.github.io.git #push到仓库 git push -u origin master 4、新增、更新博客 #新增博客 hugo new post/blog.md #编写博客 vim content/post/blog.
+1、安装Hugo #安装Hugo brew update brew install hugo hugo version 2、新建博客并启动 #新建 hugo new site MyBlog #下载主题并配置 cd themes git clone https://github.
         </div>
 
         <div class="read-more-link">
@@ -144,11 +165,6 @@ mybatis.mapperLocations=classpath:mapper/*.xml mybatis.typeAliasesPackage=com.sy
 sudo su dhclient 2、查看已分配的IP 这里分配到是192.168.1.106，后面需要这个IP设置为静态IP
 命令：
 ifconfig 3、修改网卡配置文件 修改或新增标红处配置，wq保存退出。
-命令：
-vim /etc/sysconfig/network-scripts/ifcfg-ens33 4、重启网络配置 systemctl restart network.service 可能需要重新连接网络
-5、测试 ping百度测试成功。
-命令：
-ping www.baidu.com 
         </div>
 
         <div class="read-more-link">
@@ -182,9 +198,9 @@ ping www.baidu.com
 
   <footer>
   <div>
-    &copy;  2020
+    &copy; Author Name 2020
 
-    
+    &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>
 
     
   </div>
@@ -195,7 +211,7 @@ ping www.baidu.com
           integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
           crossorigin="anonymous"></script>
 
-  
+  <script src="/js/blog.js"></script>
 
   
 </body>
