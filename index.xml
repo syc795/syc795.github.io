@@ -6,10 +6,20 @@
     <description>Recent content on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2020 23:14:41 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 14:05:42 +0800</lastBuildDate>
     
 	<atom:link href="https://syc795.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nginx命令</title>
+      <link>https://syc795.github.io/post/nginx%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 18 Jul 2020 14:05:42 +0800</pubDate>
+      
+      <guid>https://syc795.github.io/post/nginx%E5%91%BD%E4%BB%A4/</guid>
+      <description>Nginx启动 nginx 然后在浏览器中输入：http://localhost:8080/ 查看 Nginx 首页。
+Nginx操作   nginx -s reload：重新加载配置</description>
+    </item>
     
     <item>
       <title>Spring配置</title>
