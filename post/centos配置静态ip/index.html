@@ -136,28 +136,28 @@ ifconfig 3、修改网卡配置文件 修改或新增标红处配置，wq保存�
   </div>
 
   <h2 id="1切换root使用dhclient自定分配ip">1、切换root，使用dhclient自定分配IP</h2>
-<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232204987.png" alt="image-20200705232204987"></p>
+<p><img src="http://syc795.top/image-20200705232204987.png" alt="image-20200705232204987"></p>
 <p>命令：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo su
 dhclient
 </code></pre></div><h2 id="2查看已分配的ip">2、查看已分配的IP</h2>
-<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232335052.png" alt="image-20200705232335052"></p>
+<p><img src="http://syc795.top/image-20200705232335052.png" alt="image-20200705232335052"></p>
 <p>这里分配到是192.168.1.106，后面需要这个IP设置为静态IP</p>
 <p>命令：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ifconfig
 </code></pre></div><h2 id="3修改网卡配置文件">3、修改网卡配置文件</h2>
-<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232526856.png" alt="image-20200705232526856"></p>
-<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232750122.png" alt="image-20200705232750122"></p>
+<p><img src="http://syc795.top/image-20200705232526856.png" alt="image-20200705232526856"></p>
+<p><img src="http://syc795.top/image-20200705232750122.png" alt="image-20200705232750122"></p>
 <p>修改或新增标红处配置，wq保存退出。</p>
 <p>命令：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/sysconfig/network-scripts/ifcfg-ens33
 </code></pre></div><h2 id="4重启网络配置">4、重启网络配置</h2>
-<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705232941537.png" alt="image-20200705232941537"></p>
+<p><img src="http://syc795.top/image-20200705232941537.png" alt="image-20200705232941537"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">systemctl restart network.service
 </code></pre></div><p>可能需要重新连接网络</p>
-<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705233657160.png" alt="image-20200705233657160"></p>
+<p><img src="http://syc795.top/image-20200705233657160.png" alt="image-20200705233657160"></p>
 <h2 id="5测试">5、测试</h2>
-<p><img src="http://qd0axe6yv.bkt.clouddn.com/image-20200705233723948.png" alt="image-20200705233723948"></p>
+<p><img src="http://syc795.top/image-20200705233723948.png" alt="image-20200705233723948"></p>
 <p>ping百度测试成功。</p>
 <p>命令：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ping www.baidu.com
